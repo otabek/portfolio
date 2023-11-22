@@ -1,11 +1,6 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-// type CardProps = {
-//   children: React.ReactNode;
-//   className?: HTMLAttributes<HTMLDivElement>;
-// };
-
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -23,5 +18,6 @@ const Card = React.forwardRef<
     </div>
   );
 });
+Card.displayName = "Card";
 
 export default Card;

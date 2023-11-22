@@ -22,5 +22,6 @@ const SkillCard = React.forwardRef<HTMLDivElement, SkillCardProps>(
     );
   },
 );
+SkillCard.displayName = "SkillCard";
 
 export default SkillCard;
