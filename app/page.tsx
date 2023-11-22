@@ -5,11 +5,11 @@ import experienceData from "@/lib/data/experience.json";
 import { skillData } from "@/components/icons/logos";
 import SkillCard from "@/components/icons/ui/SkillCard";
 
-export default function About() {
+export default function AboutPage() {
   return (
     <main>
       <section>
-        <Container className="mt-[76px]">
+        <Container>
           <div className="flex gap-6">
             <Card>
               <div className="relative w-[372px]">
@@ -45,11 +45,11 @@ export default function About() {
             <Card className="flex w-1/2 flex-col gap-4">
               <h3 className="text-lg uppercase">Experience</h3>
               <div className="flex flex-col gap-5">
-                {experienceData.map((exp) => (
-                  <div key={exp.company} className="flex flex-col gap-2">
-                    <h3>{exp.position}</h3>
-                    <p className="text-gray-200 text-sm">{exp.company}</p>
-                    <p className="text-gray-200 text-sm">{exp.date}</p>
+                {experienceData.map(({ company, date, position }) => (
+                  <div key={company} className="flex flex-col gap-2">
+                    <h3>{position}</h3>
+                    <p className="text-gray-200 text-sm">{company}</p>
+                    <p className="text-gray-200 text-sm">{date}</p>
                   </div>
                 ))}
               </div>
@@ -57,12 +57,8 @@ export default function About() {
             <Card className="flex w-1/2 flex-col gap-4">
               <h3 className="uppercase">Skills</h3>
               <div className="flex flex-wrap content-start items-start gap-4 self-stretch">
-                {skillData.map((skill) => (
-                  <SkillCard
-                    key={skill.title}
-                    title={skill.title}
-                    icon={skill.icon}
-                  />
+                {skillData.map(({ title, icon }) => (
+                  <SkillCard key={title} title={title} icon={icon} />
                 ))}
               </div>
             </Card>
