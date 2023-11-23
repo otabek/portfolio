@@ -30,7 +30,7 @@ export default function ContactPage() {
   return (
     <section>
       <Container>
-        <div className="flex gap-8">
+        <div className="flex flex-col gap-8 md:flex-row">
           {contactData.map(({ address, href, icon, title }) => (
             <Link
               key={address}
@@ -38,12 +38,12 @@ export default function ContactPage() {
               target="_blank"
               className="flex flex-1 transition-transform duration-300 hover:scale-105"
             >
-              <Card className="flex h-[433px] flex-1 flex-col items-center justify-center gap-4 pb-[100px]">
+              <Card className="flex flex-1 flex-col items-center justify-center gap-4 md:px-8 md:py-24 lg:h-[433px] lg:p-6 lg:pb-[100px]">
                 <div className="flex h-12 w-12 items-center justify-center rounded-[24px] border border-solid  border-white">
                   {icon}
                 </div>
-                <h3 className="text-2xl">{address}</h3>
-                <p className="text-gray-100">{title}</p>
+                <h3 className="text-base lg:text-2xl">{address}</h3>
+                <p className="text-gray-100 text-sm lg:text-base">{title}</p>
               </Card>
             </Link>
           ))}

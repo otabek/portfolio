@@ -10,9 +10,9 @@ export default function AboutPage() {
     <main>
       <section>
         <Container>
-          <div className="flex gap-6">
-            <Card>
-              <div className="relative w-[372px]">
+          <div className="flex flex-col gap-6 md:items-center lg:flex-row lg:items-stretch">
+            <Card className="md:w-1/2 lg:w-[unset]">
+              <div className="relative h-[300px] w-full lg:h-full lg:w-[330px]">
                 <Image
                   src="/img/Profile.jpeg"
                   alt="Profile image"
@@ -23,7 +23,7 @@ export default function AboutPage() {
               </div>
             </Card>
             <div className="w-full">
-              <h1 className="mb-[30px] pl-6 pt-6 text-6xl font-extrabold uppercase">
+              <h1 className="mb-[30px] pt-6 text-center text-5xl font-extrabold uppercase md:pl-0 lg:pl-6 lg:text-start lg:text-6xl">
                 Software Engineer
               </h1>
               <Card className="flex-col gap-6">
@@ -41,8 +41,8 @@ export default function AboutPage() {
               </Card>
             </div>
           </div>
-          <div className="mt-6 flex gap-6">
-            <Card className="flex w-1/2 flex-col gap-4">
+          <div className="mt-6 flex flex-col gap-6 sm:flex-row">
+            <Card className="flex flex-col gap-4 sm:w-1/2">
               <h3 className="text-lg uppercase">Experience</h3>
               <div className="flex flex-col gap-5">
                 {experienceData.map(({ company, date, position }) => (
@@ -54,7 +54,7 @@ export default function AboutPage() {
                 ))}
               </div>
             </Card>
-            <Card className="flex w-1/2 flex-col gap-4">
+            <Card className="flex flex-col gap-4 sm:w-1/2">
               <h3 className="uppercase">Skills</h3>
               <div className="flex flex-wrap content-start items-start gap-4 self-stretch">
                 {skillData.map(({ title, icon }) => (
