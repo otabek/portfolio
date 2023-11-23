@@ -36,7 +36,7 @@ export default function ContactPage() {
               key={address}
               href={href}
               target="_blank"
-              className="flex flex-1"
+              className="flex flex-1 transition-transform duration-300 hover:scale-105"
             >
               <Card className="flex h-[433px] flex-1 flex-col items-center justify-center gap-4 pb-[100px]">
                 <div className="flex h-12 w-12 items-center justify-center rounded-[24px] border border-solid  border-white">
