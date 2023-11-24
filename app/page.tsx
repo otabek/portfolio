@@ -48,14 +48,14 @@ export default function AboutPage() {
                 {experienceData.map(({ company, date, position }) => (
                   <div key={company} className="flex flex-col gap-2">
                     <h3>{position}</h3>
-                    <p className="text-gray-200 text-sm">{company}</p>
-                    <p className="text-gray-200 text-sm">{date}</p>
+                    <p className="text-sm text-gray-200">{company}</p>
+                    <p className="text-sm text-gray-200">{date}</p>
                   </div>
                 ))}
               </div>
             </Card>
             <Card className="flex flex-col gap-4 sm:w-1/2">
-              <h3 className="uppercase">Skills</h3>
+              <h3 className="text-lg uppercase">Skills</h3>
               <div className="flex flex-wrap content-start items-start gap-4 self-stretch">
                 {skillData.map(({ title, icon }) => (
                   <SkillCard key={title} title={title} icon={icon} />
