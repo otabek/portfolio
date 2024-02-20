@@ -1,9 +1,9 @@
-import Card from "@/components/icons/ui/Card";
-import Container from "@/components/icons/ui/Container";
 import Image from "next/image";
-import experienceData from "@/lib/data/experience.json";
+import Card from "@/components/ui/Card";
+import Container from "@/components/ui/Container";
+import SkillCard from "@/components/ui/SkillCard";
 import { skillData } from "@/components/icons/logos";
-import SkillCard from "@/components/icons/ui/SkillCard";
+import experienceData from "@/lib/data/experience.json";
 
 export default function AboutPage() {
   return (

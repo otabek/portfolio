@@ -1,25 +1,23 @@
-import Email from "@/components/icons/Email";
-import Github from "@/components/icons/Github";
-import Telegram from "@/components/icons/Telegram";
-import Card from "@/components/icons/ui/Card";
-import Container from "@/components/icons/ui/Container";
 import Link from "next/link";
+import Card from "@/components/ui/Card";
+import Container from "@/components/ui/Container";
+import { Icons } from "@/components/icons";
 
 const contactData = [
   {
-    icon: <Telegram />,
+    icon: <Icons.telegram />,
     address: "@otabek_n",
     title: "Telegram",
     href: "https://t.me/otabek_n",
   },
   {
-    icon: <Email />,
+    icon: <Icons.email />,
     address: "narzulla3v@gmail.com",
     title: "Email",
     href: "mailto:narzulla3v@gmail.com",
   },
   {
-    icon: <Github />,
+    icon: <Icons.github />,
     address: "otabek",
     title: "GitHub",
     href: "https://github.com/otabek",
@@ -43,7 +41,7 @@ export default function ContactPage() {
                   {icon}
                 </div>
                 <h3 className="text-base lg:text-2xl">{address}</h3>
-                <p className="text-gray-100 text-sm lg:text-base">{title}</p>
+                <p className="text-sm text-gray-100 lg:text-base">{title}</p>
               </Card>
             </Link>
           ))}
