@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import SkillCard from "@/components/ui/SkillCard";
 import { skillData } from "@/components/icons/logos";
 import experienceData from "@/lib/data/experience.json";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -45,10 +46,16 @@ export default function AboutPage() {
             <Card className="flex flex-col gap-4 sm:w-1/2">
               <h3 className="text-lg uppercase">Experience</h3>
               <div className="flex flex-col gap-5">
-                {experienceData.map(({ company, date, position }) => (
+                {experienceData.map(({ company, date, position, url }) => (
                   <div key={company} className="flex flex-col gap-2">
                     <h3>{position}</h3>
-                    <p className="text-sm text-gray-200">{company}</p>
+                    <Link
+                      href={url}
+                      target="_blank"
+                      className="text-sm text-gray-200"
+                    >
+                      {company}
+                    </Link>
                     <p className="text-sm text-gray-200">{date}</p>
                   </div>
                 ))}
