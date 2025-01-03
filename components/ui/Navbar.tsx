@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const pages = [
   { link: "/", title: "About" },
-  { link: "/cv.pdf", title: "CV" },
+  { link: "https://docs.google.com/document/d/1JPcQuFq7Q6bVZBsKSQt0ZHa_m2hjd2kun7DTmy2a9BM/edit?usp=sharing", title: "CV" },
   { link: "/contact", title: "Contact" },
 ];
 
