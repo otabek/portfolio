@@ -11,10 +11,10 @@ import Tailwindcss from "./Tailwindcss";
 import TypeScript from "./TypeScript";
 
 export const skillData = [
-  { icon: <Reactjs />, title: "React.js" },
-  { icon: <Nextjs />, title: "Next.js" },
   { icon: <JavaScript />, title: "JavaScript" },
   { icon: <TypeScript />, title: "TypeScript" },
+  { icon: <Reactjs />, title: "React.js" },
+  { icon: <Nextjs />, title: "Next.js" },
   { icon: <Reactjs />, title: "React Native" },
   { icon: <Nodejs />, title: "Node.js" },
   { title: "Express.js" },
